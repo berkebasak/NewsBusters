@@ -1,7 +1,7 @@
-package view;
+package ui;
 
-import entity.Article;
-import use_case.NewsService;
+import model.Article;
+import service.NewsService;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,12 +10,12 @@ import java.awt.event.MouseEvent;
 import java.net.URI;
 import java.util.List;
 
-public class TopHeadlinesView extends JFrame {
+public class UI extends JFrame {
     private final NewsService newsService = new NewsService();
     private final DefaultListModel<Article> listModel = new DefaultListModel<>();
     private final JList<Article> articleList = new JList<>(listModel);
 
-    public TopHeadlinesView() {
+    public UI() {
         setTitle("News Viewer");
         setSize(800, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

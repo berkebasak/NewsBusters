@@ -1,12 +1,12 @@
-package app;
+package main;
 
-import view.TopHeadlinesView;
+import ui.UI;
 import javax.swing.SwingUtilities;
 
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            TopHeadlinesView app = new TopHeadlinesView();
+            UI app = new UI();
             app.setVisible(true);
         });
     }

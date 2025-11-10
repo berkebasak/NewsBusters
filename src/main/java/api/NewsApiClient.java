@@ -1,6 +1,6 @@
-package data_access;
+package api;
 
-import entity.Article;
+import model.Article;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import okhttp3.OkHttpClient;
@@ -27,7 +27,7 @@ public class NewsApiClient {
 
             try (Response response = client.newCall(request).execute()) {
                 if (!response.isSuccessful()) {
-                    IO.println("NewsData error: " + response.code());
+                    System.err.println("NewsData error: " + response.code());
                     return articles;
                 }
 
@@ -48,7 +48,7 @@ public class NewsApiClient {
                 }
             }
         } catch (Exception e) {
-            IO.println("NewsData error: " + e.getMessage());
+            System.err.println("NewsData error: " + e.getMessage());
         }
         return articles;
     }
