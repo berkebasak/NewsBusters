@@ -1,7 +1,7 @@
-package service;
+package use_case;
 
-import api.NewsApiClient;
-import model.Article;
+import data_access.NewsApiClient;
+import entity.Article;
 import java.util.List;
 
 public class NewsService {
